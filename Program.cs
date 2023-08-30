@@ -37,6 +37,7 @@ public class LocalIpAddress : NetworkCategory { }
 public class ExternalIpAddress : NetworkCategory { }
 public class HostName : NetworkCategory { }
 
+[Description("Get the local IP address.")]
 public class LocalIpAddressCommand : Command<LocalIpAddress>
 {
     public override int Execute(CommandContext context, LocalIpAddress settings)
@@ -47,6 +48,7 @@ public class LocalIpAddressCommand : Command<LocalIpAddress>
     }
 }
 
+[Description("Get the external IP address. (The IP address visible outside the local network)")]
 public class ExternalIpAddressCommand : Command<ExternalIpAddress>
 {
     public override int Execute(CommandContext context, ExternalIpAddress settings)
@@ -57,6 +59,7 @@ public class ExternalIpAddressCommand : Command<ExternalIpAddress>
     }
 }
 
+[Description("Get the host/machine name.")]
 public class HostNameCommand : Command<HostName>
 {
     public override int Execute(CommandContext context, HostName settings)
@@ -74,6 +77,7 @@ public class CheckXml : ValidateCategory
     [CommandArgument(0, "<FILE_NAME>")]
     public string FileName { get; set; }
 
+    [Description("Display error messages.")]
     [CommandOption("-v|--verbose")]
     [DefaultValue(false)]
     public bool Verbose { get; set; }
@@ -84,11 +88,13 @@ public class CheckJson : ValidateCategory
     [CommandArgument(0, "<FILE_NAME>")]
     public string FileName { get; set; }
 
+    [Description("Display error messages.")]
     [CommandOption("-v|--verbose")]
     [DefaultValue(false)]
     public bool Verbose { get; set; }
 }
 
+[Description("Check to see if the given file contains well-formed XML.")]
 public class CheckXmlCommand : Command<CheckXml>
 {
     public override int Execute(CommandContext context, CheckXml settings)
@@ -101,6 +107,7 @@ public class CheckXmlCommand : Command<CheckXml>
     }
 }
 
+[Description("Check to see if the given file contains well-formed JSON.")]
 public class CheckJsonCommand : Command<CheckJson>
 {
     public override int Execute(CommandContext context, CheckJson settings)
