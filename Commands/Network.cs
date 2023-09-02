@@ -29,7 +29,7 @@ namespace SystemToolbox.Commands
 
         private static async Task<IPAddress> GetExternalIpAddressHelper()
         {
-            var externalIpString = (await new HttpClient().GetStringAsync("http://icanhazip.com"))
+            var externalIpString = (await new HttpClient().GetStringAsync("https://api.ipify.org"))
                 .Replace("\\r\\n", "")
                 .Replace("\\n", "")
                 .Trim();
