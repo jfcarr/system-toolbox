@@ -5,8 +5,6 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        // https://spectreconsole.net/cli/composing
-
         var app = new CommandApp();
 
         app.Configure(config =>
