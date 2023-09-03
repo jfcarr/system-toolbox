@@ -16,8 +16,8 @@ internal class Program
 
             config.AddBranch<NetworkCategory>("network", add =>
             {
-                add.AddCommand<LocalIpAddressCommand>("local_ip");
-                add.AddCommand<ExternalIpAddressCommand>("external_ip");
+                add.AddCommand<LocalIpAddressCommand>("local-ip");
+                add.AddCommand<ExternalIpAddressCommand>("external-ip");
                 add.AddCommand<HostNameCommand>("hostname");
             });
 
