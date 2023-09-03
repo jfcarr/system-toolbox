@@ -1,4 +1,4 @@
-namespace SystemToolbox
+namespace SystemToolbox.Settings
 {
     public sealed class AppSettings
     {

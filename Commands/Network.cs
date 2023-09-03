@@ -1,5 +1,6 @@
 using System.Net;
 using System.Net.Sockets;
+using SystemToolbox.Settings;
 
 namespace SystemToolbox.Commands
 {

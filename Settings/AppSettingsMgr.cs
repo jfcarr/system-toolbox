@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Configuration;
 
-namespace SystemToolbox
+namespace SystemToolbox.Settings
 {
     public static class AppSettingsMgr
     {
